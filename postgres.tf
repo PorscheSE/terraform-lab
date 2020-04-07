@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "resource_group" {
-  location = "${var.location}"
-  name     = "${var.service_name}-${var.environment}-postgresql-rg"
+  location = var.location
+  name     = var.service_name-var.environment-postgresql-rg
   count    = "${var.resource_group_name == "" ? 1 : 0}"
 }
 
